@@ -1,0 +1,11 @@
+# SearXNG limiter configuration
+# Tokens of public SearXNG instances are sent to server and can be used
+# to limit the access to the instance for users.
+
+[botdetection.ip_limit]
+# activate link_token method in the ip_limit
+link_token = false
+
+[botdetection.ip_lists]
+pass_ip = []
+block_ip = []
