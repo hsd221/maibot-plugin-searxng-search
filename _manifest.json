@@ -8,8 +8,12 @@
     "url": "https://github.com/hsd221"
   },
   "license": "GPL-3.0-or-later",
-  "repository_url": "https://github.com/hsd221/maibot-plugin-searxng-search",
-  "homepage_url": "https://github.com/hsd221/maibot-plugin-searxng-search",
+  "urls": {
+    "repository": "https://github.com/hsd221/maibot-plugin-searxng-search",
+    "homepage": "https://github.com/hsd221/maibot-plugin-searxng-search",
+    "documentation": "https://github.com/hsd221/maibot-plugin-searxng-search",
+    "issues": "https://github.com/hsd221/maibot-plugin-searxng-search/issues"
+  },
   "host_application": {
     "min_version": "1.0.0",
     "max_version": "1.99.99"
