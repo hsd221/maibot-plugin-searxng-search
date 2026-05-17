@@ -1,0 +1,20 @@
+[plugin]
+enabled = true
+config_version = "1.0.0"
+
+[searxng]
+host = "http://localhost"
+port = 8888
+search_general = true
+search_news = true
+search_images = false
+search_music = false
+search_files = false
+search_science = true
+search_it = false
+search_social_media = false
+search_map = false
+result_format = "text"
+max_results = 5
+tool_mode = "始终可见"
+request_timeout = 10.0

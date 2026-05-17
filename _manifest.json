@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+  "version": "1.0.0",
+  "name": "SearXNG Search",
+  "description": "通过 planner 工具调用本地 SearXNG 实例进行网页搜索，支持通用搜索、新闻搜索和可选的图片搜索。",
+  "author": {
+    "name": "hsd221",
+    "url": "https://github.com/hsd221"
+  },
+  "license": "GPL-v3.0-or-later",
+  "urls": {
+    "repository": "https://github.com/hsd221/maibot-plugin-searxng-search",
+    "homepage": "https://github.com/hsd221/maibot-plugin-searxng-search",
+    "documentation": "https://github.com/hsd221/maibot-plugin-searxng-search",
+    "issues": "https://github.com/hsd221/maibot-plugin-searxng-search/issues"
+  },
+  "host_application": {
+    "min_version": "1.0.0",
+    "max_version": "1.99.99"
+  },
+  "sdk": {
+    "min_version": "2.0.0",
+    "max_version": "2.99.99"
+  },
+  "dependencies": [],
+  "capabilities": ["llm.generate"],
+  "i18n": {
+    "default_locale": "zh-CN",
+    "supported_locales": ["zh-CN"]
+  },
+  "id": "hsd221.searxng-search"
+}
