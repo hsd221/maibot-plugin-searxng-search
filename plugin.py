@@ -2,13 +2,21 @@
 
 from __future__ import annotations
 
+import os as _os
+import sys as _sys
+
+# 确保插件自身目录在 sys.path 中，使得无论插件目录叫什么名字都能正常导入
+_plugin_dir = _os.path.dirname(_os.path.abspath(__file__))
+if _plugin_dir not in _sys.path:
+    _sys.path.insert(0, _plugin_dir)
+
 from typing import Any, ClassVar
 
 from maibot_sdk import HookHandler, MaiBotPlugin, PluginConfigBase, Tool
 from maibot_sdk.types import HookMode, ToolParameterInfo, ToolParamType
 
-from plugins.searxng_search.config import SearXNGSearchConfig
-from plugins.searxng_search.searxng_client import SearXNGClient, SearchResult
+from config import SearXNGSearchConfig
+from searxng_client import SearXNGClient, SearchResult
 
 
 def format_search_results(
