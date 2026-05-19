@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "name": "SearXNG Search",
   "description": "通过 planner 工具调用本地 SearXNG 实例进行网页搜索，支持通用搜索、新闻搜索、图片搜索等多种类别。",
   "author": {
