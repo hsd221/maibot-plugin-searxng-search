@@ -83,10 +83,7 @@ class SearXNGClient:
         max_results: int,
     ) -> list:
         params.update({"q": query, "format": "json"})
-        try:
-            data = await self._request(params)
-        except Exception:
-            return []
+        data = await self._request(params)
         return [factory(item) for item in data.get("results", [])[:max_results]]
 
     async def search(
@@ -96,7 +93,7 @@ class SearXNGClient:
         max_results: int = 5,
     ) -> list[SearchResult]:
         """执行网页搜索。参数 *categories* 为类别列表（如 ``["general", "news"]``），
-        不传则使用 SearXNG 默认类别。网络错误返回空列表。"""
+        不传则使用 SearXNG 默认类别。"""
         params: dict = {}
         if categories:
             params["categories"] = ",".join(categories)
@@ -107,5 +104,5 @@ class SearXNGClient:
         query: str,
         max_results: int = 5,
     ) -> list[ImageResult]:
-        """执行图片搜索。网络错误返回空列表。"""
+        """执行图片搜索。"""
         return await self._fetch(query, {"categories": "images"}, _make_image_result, max_results)

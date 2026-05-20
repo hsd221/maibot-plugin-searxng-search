@@ -143,9 +143,13 @@ class SearXNGSearchPlugin(MaiBotPlugin):
             timeout=cfg.request_timeout,
         )
 
-        results = await client.search(
-            query=query, categories=category_list, max_results=cfg.max_results,
-        )
+        try:
+            results = await client.search(
+                query=query, categories=category_list, max_results=cfg.max_results,
+            )
+        except Exception as exc:
+            self.ctx.logger.error(f"[SearXNGSearch] 搜索请求失败: {exc}")
+            return {"success": False, "error": f"搜索请求失败: {exc}"}
 
         formatted = format_search_results(results, cfg.result_format)
 
